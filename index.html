@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Mobile-modbus : A simple Android Modbus scanner/polling program with modern android UI." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mobile-modbus</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bigcat/Mobile-Modbus">View on GitHub</a>
+
+          <h1 id="project_title">Mobile-modbus</h1>
+          <h2 id="project_tagline">A simple Android Modbus scanner/polling program with modern android UI.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bigcat/Mobile-Modbus/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bigcat/Mobile-Modbus/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Mobile Modbus</h1>
+
+<hr><p>Mobile Modbus is an Android Modbus polling client using modern android UI design guidelines and design patterns such as the Action bar for navigation, a slide-in menu for settings, and appropriately scaled data-display for the device you are working on (i.e. list views on a phone, and a grid on a tablet).</p>
+
+<p>More info to come as this project develops.  Until then feel free to follow along with my <a href="http://www.bencatlin.com">blog</a> for information, or follow me on <a href="http://www.twitter.com/bigcat2k">twitter</a>.</p>
+
+<h3>Contributing / Reporting Issues</h3>
+
+<hr><p>Eventually I'll put some basic stuff here to know how to contribute more easily - but basically for now, fork the project on github, and submit a pull request and I'll evaluate it and add it if it is in line with what we are after for the goals of the project.</p>
+
+<p>If you see anything wrong with it in any way, just use github to file an issue ticket (please don't comment on my blog about it).</p>
+
+<h3>Building</h3>
+
+<hr><p>This project relies on three libraries:</p>
+
+<ul>
+<li> <a href="http://sourceforge.net/projects/modbus4j/">Modbus4J</a> - a Java Modbus library that is pretty extensible and full-featured with some nice batching functions that we (are going to) make use of.  At some point in the not too distant future, I will push a git-ified version of the original library in CVS on source forge to my github account.</li>
+<li> <a href="https://github.com/JakeWharton/ActionBarSherlock">ActionBarSherlock</a> - this is a library that gives us the action bar design pattern that is basically free in 3.0+, but in 2.x versions of android.</li>
+<li> <a href="https://github.com/jfeinstein10/SlidingMenu">SlidingMenu</a> - a library that makes it easy to generate a slide-in menu.  We (will) use this for sliding in the connection/slave/server device settings as well as the register settings from the left on demand.  This allows the most screen real-estate for displaying the information that is important the most often - which is the register data.  Please review the section in the readme file on modifying for use with ActionbarSherlock.</li>
+</ul><p>Once you have these libraries downloaded - add the two android-specific libraries to your eclipse workspace by selecting new project from file - and then importing the 'library' folder from within those projects.</p>
+
+<p>Then, once they are imported, add them as libraries to the Properties - Android section of the main Mobile Modbus project.</p>
+
+<p>Next import the Modbus4J project as a new eclipse project - right now I'm just checking the whole damned thing out from CVS on sourceforge.   And, then go to Properties - Java Build Path, and click the "Projects" tab at the top.  Now click "Add" and select the modbus4j project from your current eclipse workspace.</p>
+
+<p>This should get you all the libraries you need.</p>
+
+<h4>License</h4>
+
+<hr><p>This project is GPL 3.0 because Modbus4J is.</p>
+
+<hr><h6>Last edited by <a href="mailto://ben@bencatlin.com">Ben Catlin</a> on December 29, 2012</h6>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Mobile-modbus maintained by <a href="https://github.com/bigcat">bigcat</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
