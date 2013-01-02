@@ -7,14 +7,17 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="16" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme" 
+        android:backupAgent="MMBackupAgent">
         <activity
-            android:name="com.bencatlin.mobilemodbus.ModbusDataViewActivity"
+            android:name="com.bencatlin.mobilemodbus.ui.ModbusDataViewActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data android:name="com.google.android.backup.api_key"
+    		android:value="AEdPqrEAAAAIwJx4yjzdly7eVETHVBynUhuV-bIkQ69HfknyzQ" />
     </application>
 
 </manifest>

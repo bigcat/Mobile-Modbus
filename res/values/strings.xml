@@ -4,5 +4,21 @@
     <string name="app_name">Mobile Modbus</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="host_name_ip_address">Host Name / IP Address</string>
+    <string name="port">Port</string>
+    <string name="data_length">Length</string>
+    <string name="slave_address">Slave Address / Unit ID</string>
+    <string-array name="data_model_table_types">
+        <item >Input Discretes</item>
+        <item >Holding/Output Discretes</item>
+        <item >Input Registers</item>
+        <item >Holding/Output Registers</item>
+    </string-array>
+    <string name="company_info_text"><![CDATA[
+	    <h2>Brought to you by BigCat Inc.</h2><br />
+	    <p>For more information about the app and development updates check out <a href="http://bigcat.github.com/Mobile-Modbus/">the GitHub project homepage</a>.</p>
+	    <p>This software is based on the Modbus library <a href="http://sourceforge.net/projects/modbus4j/">Modbus4J</a>, created by <a href="http://www.serotoninsoftware.com/">Seretonin software</a>.</p>
+		<p>This app is also open source, licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.html">GPL version 3</a>, and its source code is hosted and available on <a href="https://github.com/bigcat/Mobile-Modbus">GitHub</a>.</p>]]>
+	</string>
 
 </resources>
