@@ -82,9 +82,9 @@ public class ModbusDataViewActivity extends SherlockFragmentActivity {
 		// Set up the slide-in menu
 		mMenu = new SlidingMenu(this);
 		
-		View sidebar = LayoutInflater.from(this).inflate(R.layout.slidingmenumain, null);
+		View sidebar = LayoutInflater.from(this).inflate(R.layout.basic_menu, null);
 		// Grab the listview - could we do this programatically and would that be faster?
-		final ListView listView = (ListView)sidebar.findViewById(android.R.id.list);
+		final ListView listView = (ListView)sidebar.findViewById(R.id.basic_menu_listview);
         listView.setFooterDividersEnabled(true);
         /*mSidebarAdapter = new SidebarAdapter();
         listView.setAdapter(mSidebarAdapter);*/
