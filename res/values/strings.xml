@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mobile Modbus</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="menu_connection">Connect</string>
     <string name="menu_settings">Settings</string>
+    
+    <string name="app_name">Mobile Modbus</string>
     <string name="host_name_ip_address">Host Name / IP Address</string>
     <string name="port">Port</string>
     <string name="data_length">Length</string>

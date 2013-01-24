@@ -15,6 +15,9 @@ package com.bencatlin.mobilemodbus.ui;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.Menu;
 import com.bencatlin.mobilemodbus.MMConstants;
 import com.bencatlin.mobilemodbus.R;
 import com.bencatlin.mobilemodbus.R.id;
@@ -29,7 +32,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -79,6 +81,14 @@ public class ModbusDataViewActivity extends SherlockFragmentActivity {
 		// Set up the content
 		setContentView(R.layout.activity_modbusdataview);
 		
+		// set the Behind View
+		/*setBehindContentView(R.layout.menu_frame);
+		FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
+		mFrag = new SampleListFragment();
+		t.replace(R.id.menu_frame, mFrag);
+		t.commit();
+		*/
+		
 		// Set up the slide-in menu
 		mMenu = new SlidingMenu(this);
 		
@@ -93,13 +103,12 @@ public class ModbusDataViewActivity extends SherlockFragmentActivity {
         mMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         mMenu.setShadowWidthRes(R.dimen.shadow_width);
         mMenu.setShadowDrawable(R.drawable.defaultshadow);
-        //mMenu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        mMenu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
         mMenu.setFadeDegree(0.35f);
         mMenu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 
         mMenu.setMenu(sidebar);
-        
-
+		
         /* Initialize UI variables */
         /*mInfoLayout = v_main.findViewById(R.id.info_layout);
         mInfoProgress = (ProgressBar) v_main.findViewById(R.id.info_progress);
@@ -108,7 +117,7 @@ public class ModbusDataViewActivity extends SherlockFragmentActivity {
         /* Set up the action bar */
         mActionBar = getSupportActionBar();
         mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        mActionBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
+        //mActionBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
         mActionBar.setDisplayHomeAsUpEnabled(true);
 
         /* Add padding between the home button and the arrow */
@@ -118,5 +127,31 @@ public class ModbusDataViewActivity extends SherlockFragmentActivity {
             home.setPadding(20, 0, 0, 0);
 		
 	}
-
+	
+	@Override
+	public void onBackPressed() {
+		if (mMenu.isMenuShowing()) {
+			mMenu.showContent();
+		} else {
+			super.onBackPressed();
+		}
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			mMenu.toggle();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    MenuInflater inflater = getSupportMenuInflater();
+	    inflater.inflate(R.menu.menu_modbusdataview, menu);
+	    return true;
+	}
+	
 }
