@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <stroke
+                android:width="2dp"
+                android:color="#999" />
+ 			<solid
+ 			    android:color="#DDD"
+ 			    />
+        </shape>
+    </item>
+	<item>
+    	<inset
+        	android:insetBottom="0dp"
+        	android:insetLeft="-3dp"
+        	android:insetRight="0dp"
+        	android:insetTop="-3dp" >
+        	<shape>
+        	    <stroke
+            	    android:width="2dp"
+                	android:color="#DDD" />
+ 
+            	<solid
+                	android:color="@android:color/transparent" />
+        	</shape>
+    	</inset>
+	</item>
+</layer-list>
