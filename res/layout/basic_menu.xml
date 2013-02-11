@@ -4,7 +4,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/menu_boarder"
     android:padding="20dp" >
-
+<fragment xmlns:android="com.bencatlin.mobilemodbus.ui.BasicSlidingMenuProvider"
+    android:id="@+id/basic_menu_preference_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@drawable/menu_outline"/>
 <ListView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/basic_menu_listview"

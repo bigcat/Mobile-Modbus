@@ -21,5 +21,14 @@
 	    <p>This software is based on the Modbus library <a href="http://sourceforge.net/projects/modbus4j/">Modbus4J</a>, created by <a href="http://www.serotoninsoftware.com/">Seretonin software</a>.</p>
 		<p>This app is also open source, licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.html">GPL version 3</a>, and its source code is hosted and available on <a href="https://github.com/bigcat/Mobile-Modbus">GitHub</a>.</p>]]>
 	</string>
-
+	<string name="pref_title_connection_category">Connection Settings</string>
+	<string name="pref_title_ipaddress_hostname">IP Address / Host Name</string>
+	<string name="pref_title_modbus_port">Port Number</string>
+	<string name="pref_title_basic_modbus_category">Modbus Parameters</string>
+	<string name="pref_title_modbus_data_type">Data Type</string>
+	<string name="pref_modbus_data_type_selection_dialog_title">Select a Data Type</string>
+	<string name="pref_modbus_data_type_default_value"></string>
+	<string name="pref_title_modbus_data_offset">Starting Address Offset</string>
+	<string name="pref_title_modbus_data_length">Data Length to Read</string>
+	
 </resources>
