@@ -8,15 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bencatlin.mobilemodbus.R;
-import com.bencatlin.mobilemodbus.interfaces.MenuProvider;
 import com.bencatlin.mobilemodbus.interfaces.ModbusBatchProvider;
 import com.serotonin.modbus4j.BatchRead;
 import com.slidingmenu.lib.SlidingMenu;
+
 
 /**
  * Class: BasicSlidingMenuFragment
  * 
  * TODO: Check for alternative way to implement a PreferenceFragment in API < v11
+ * or replace with a ListFragment
  */
 public class BasicSlidingMenuFragment extends PreferenceFragment 
 										implements ModbusBatchProvider {
@@ -53,12 +54,12 @@ public class BasicSlidingMenuFragment extends PreferenceFragment
 	 * (non-Javadoc)
 	 * @see android.preference.PreferenceFragment#onActivityCreated(android.os.Bundle)
 	 */
-	@Override
+	/*@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		
 		this.mContext = this.getActivity();
-	}
+	}*/
 	
 
 	/*

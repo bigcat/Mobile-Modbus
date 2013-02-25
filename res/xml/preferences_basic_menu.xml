@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory 
+        android:title="@string/pref_title_connection_category"
+        android:key="pref_key_connection_settings">
+        <EditTextPreference
+            android:key="pref_key_ipaddress_hostname"
+            android:title="@string/pref_title_ipaddress_hostname"
+            android:defaultValue="192.168.1.100" />
+			<!-- android:summary="@string/pref_summary_ipaddress_hostname" -->
+        <com.bencatlin.mobilemodbus.preferencetypes.IntEditTextPreference
+            android:key="pref_key_modbus_port"
+            android:title="@string/pref_title_modbus_port"
+            android:defaultValue="502"
+            android:numeric="integer"
+    		android:maxLength="8" />
+    </PreferenceCategory> 
+    <PreferenceCategory
+        android:title="@string/pref_title_basic_modbus_category"
+        android:key="pref_key_basic_modbus_settings">
+        <ListPreference
+            android:key="pref_key_modbus_data_type"
+            android:title="@string/pref_title_modbus_data_type"
+            android:dialogTitle="@string/pref_modbus_data_type_selection_dialog_title"
+        	android:entries="@array/pref_modbus_data_type_selection_entries"
+        	android:entryValues="@array/pref_modbus_data_type_selection_entry_values"
+        	android:defaultValue="@string/pref_modbus_data_type_default_value" />
+        <com.bencatlin.mobilemodbus.preferencetypes.IntEditTextPreference
+            android:key="pref_key_modbus_data_offset"
+            android:title="@string/pref_title_modbus_data_offset"
+            android:defaultValue="0" 
+            android:numeric="integer"
+    		android:maxLength="5"/>
+        <com.bencatlin.mobilemodbus.preferencetypes.IntEditTextPreference
+            android:key="pref_key_modbus_data_length"
+            android:title="@string/pref_title_modbus_data_length"
+            android:defaultValue="1" 
+            android:numeric="integer"
+    		android:maxLength="4"/>
+	</PreferenceCategory>
+        
+</PreferenceScreen>
