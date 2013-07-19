@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.5.+'
+        classpath 'com.newrelic.agent.android:agent-gradle-plugin:2.426.0'
+    }
+}
+apply plugin: 'android'
+apply plugin: 'newrelic'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.+'
+    compile "com.android.support:appcompat-v7:18.0.+"
+    //compile project(':Libraries:SlidingMenu:SlidingMenu')
+    compile project(':Libraries:Modbus4J')
+    compile 'com.newrelic.agent.android:android-agent:2.426.0'
+}
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "18.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 18
+    }
+}

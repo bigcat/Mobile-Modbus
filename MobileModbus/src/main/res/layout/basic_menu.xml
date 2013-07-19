@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_boarder"
+    android:padding="20dp" >
+    <fragment android:name="com.bencatlin.mobilemodbus.ui.fragments.BasicSlidingMenuFragment"
+        android:id="@+id/basic_menu_preference_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/menu_outline"/>
+    <ListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/basic_menu_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/menu_outline"
+        android:entries="@array/menu_item_placeholders"
+        android:gravity="center" >
+    </ListView>
+</RelativeLayout>

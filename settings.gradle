@@ -1,0 +1,1 @@
+include ':MobileModbus', ':Libraries:Modbus4J'//, ':Libraries:SlidingMenu:SlidingMenu'
