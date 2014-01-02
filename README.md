@@ -33,3 +33,5 @@ I'll add the preamble here sometime soon, and get the class header comments all 
 
 --------------
 ###### Last edited by [Ben Catlin](mailto://ben@bencatlin.com) on July 29, 2013
+
+[![Analytics](https://ga-beacon.appspot.com/UA-75215-3/Mobile-Modbus/ReadMe)](https://github.com/igrigorik/ga-beacon)
