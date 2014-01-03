@@ -8,7 +8,7 @@ package com.bencatlin.mobilemodbus.ui;
  * 
  * @author Ben Catlin
  * 
- * GPL 3.0
+ * GPL 3.0 
  * TODO: Add GPL Preamble
  * 
  *****************************************************************************/
@@ -31,14 +31,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.view.GravityCompat;
 
 import com.bencatlin.mobilemodbus.MMConstants;
 import com.bencatlin.mobilemodbus.R;
 import com.bencatlin.mobilemodbus.ui.fragments.BasicSlidingMenuFragment;
-import com.newrelic.agent.android.NewRelic;  // Data tracking - final usage TBD
 
 /**============================================================================
  * 
@@ -98,9 +97,6 @@ public class ModbusDataViewActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
         /***  Set up some data tracking for user metrics ***/
-        NewRelic.withApplicationToken(
-                "AAb840b9bdb9fa77044bf6d0721c2d5b431a76d8a5"
-        ).start(this.getApplication());
 
 
 		/*** Start initializing the UI ***/
@@ -108,17 +104,8 @@ public class ModbusDataViewActivity extends Activity {
 		// Set up the content
         setContentView( R.layout.activity_modbusdataview );
         mMainDrawerLayout = (DrawerLayout) findViewById(R.id.main_activity_drawer_layout);
+        mMainDrawerLayout.setDrawerShadow( R.drawable.drawer_shadow, GravityCompat.START );
 
-		//this.setBehindContentView(R.layout.menu_frame); //set up dummy placeholder
-		
-		// Set up the slide-in menu Fragment
-        //mBatchProviderMenu = (BasicSlidingMenuFragment) findViewById(R.id.menu_fragment)
-		//This doesn't do crap because all the important stuff is done in onCreate() which is fired during the fragment placement/lifecycle
-				
-		//FragmentTransaction t = getFragmentManager().beginTransaction();
-        //t.add( R.id.app_content_frame,  );
-        //t.replace( R.id.left_drawer, mBatchProviderMenu );
-		//t.commit();
 		
 		this.buildMenu();
 
@@ -161,18 +148,6 @@ public class ModbusDataViewActivity extends Activity {
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-
-	/**
-	 * 
-	 */
-	/*@Override
-	public void onBackPressed() {
-		if (mMenu.isMenuShowing()) {
-			mMenu.showContent();
-		} else {
-			super.onBackPressed();
-		}
-	}*/
 	
 	/**
 	 * 
@@ -236,21 +211,6 @@ public class ModbusDataViewActivity extends Activity {
 	 * 
 	 */
 	private void buildMenu() {
-		
-		/*if (mMenu == null) {
-			this.mMenu = this.getSlidingMenu();
-			
-			// build menu parameters
-			mMenu.setMode(SlidingMenu.LEFT);
-	        mMenu.setTouchModeAbove( SlidingMenu.TOUCHMODE_FULLSCREEN );
-	        mMenu.setShadowWidthRes( R.dimen.shadow_width );
-	        mMenu.setShadowDrawable( R.drawable.defaultshadow );
-	        mMenu.setBehindOffsetRes( R.dimen.slidingmenu_offset );
-	        mMenu.setFadeEnabled( true );
-	        mMenu.setFadeDegree( 0.35f );
-
-	        //mMenu.setMenu( this ); //TODO: This might not work!!!! Check 
-		} */
 
         mTitle = getResources().getString( R.string.drawer_closed_title );
         mDrawerTitle = getResources().getString( R.string.drawer_open_title );
