@@ -2,26 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/modbus_disp_row"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:marginLeft="2dp"
+    android:marginRight="2dp"
+    android:marginTop="3dp"
+    android:marginBottom="3dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
 
 	<TextView
 	    android:id="@+id/modbus_address_label"
-		android:layout_width="wrap_content"
+		android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentTop="true"
-	    android:gravity="center_vertical"
+	    android:gravity="left"
 	    android:padding="3dip"
 	    android:text="Address Label"
 	    android:textSize="12pt" />
 
 	<TextView
 	    android:id="@+id/modbus_value"
-	    android:layout_width="wrap_content"
+	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentRight="true"
-	    android:layout_alignParentTop="true"
-	    android:gravity="center_vertical"
+	    android:layout_below="@id/modbus_address_label"
+	    android:gravity="right"
 	    android:padding="3dip"
 	    android:text="Value"
 	    android:textSize="12pt" />

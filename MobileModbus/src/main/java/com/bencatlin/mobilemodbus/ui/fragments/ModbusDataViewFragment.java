@@ -12,14 +12,13 @@ package com.bencatlin.mobilemodbus.ui.fragments;
  * @author ben@bencatlin.com
  *****************************************************************************/
 
-import com.bencatlin.mobilemodbus.R;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
+import com.bencatlin.mobilemodbus.R;
 
 public class ModbusDataViewFragment extends Fragment {
 

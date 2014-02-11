@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/modbus_data_fragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:listitem="@layout/value_row"
+    android:background="#CCCCCC"
+    tools:listitem="@layout/value_row"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:dividerHeight="5dp"
+    android:drawSelectorOnTop="false">
     
 
 </ListView>
